@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Login</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">0</td><td class="numi">113.7 seconds</td><td class="numi">生成报溢单 生成报损单 </td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th>Authors</th><th># of<br/>Scenarios</th><th>Running Counts</th><th>Parameters</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">Login &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="2">com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test</td><td><a href="#m-1358438769"><b>toLose</b> (觅云测试, 生成报损单) </a></td><td>unknown</td><td class="numi">1</td><td></td><td></td><td>1533881891596</td><td class="numi">28155</td></tr><tr class="skippedodd"><td><a href="#m-1358343090"><b>toOver</b> (生成报溢单, 觅云测试) </a></td><td>unknown</td><td class="numi">1</td><td></td><td></td><td>1533881935495</td><td class="numi">25672</td></tr>
+</table>
+<h1>Login</h1>
+<h2 id="m-1358438769" name="m-1358438769" >com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test:toLose</h2>
+<div>
+<h3>Test Messages</h3>
+RunCount=2<br/>
+result/screenshot/2018_08_10_14_18_39_toLose.jpg<br/>
+<img src="../../result/screenshot/2018_08_10_14_18_39_toLose.jpg"/><br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: 数据对比失败，第一条数据为:-4.00,第二条数据为：-4.00，应为：-5.00，设定差值为：1
+	at com.hebg3.utils.pagehelper.PageHelperUtil.compareData(PageHelperUtil.java:90)
+	at com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test.toLose(LoginPage_001_LoginSuccessFunction_Test.java:127)
+... Removed 26 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m-1358343090" name="m-1358343090" >com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test:toOver</h2>
+<div>
+<h3>Test Messages</h3>
+RunCount=2<br/>
+result/screenshot/2018_08_10_14_19_21_toOver.jpg<br/>
+<img src="../../result/screenshot/2018_08_10_14_19_21_toOver.jpg"/><br/>
+<h3>Failure</h3>
+<div class="stacktrace">java.lang.AssertionError: 数据对比失败，第一条数据为:-4.00,第二条数据为：-3.00，应为：-5.00，设定差值为：1
+	at com.hebg3.utils.pagehelper.PageHelperUtil.compareData(PageHelperUtil.java:90)
+	at com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test.toOver(LoginPage_001_LoginSuccessFunction_Test.java:138)
+... Removed 26 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

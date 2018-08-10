@@ -1,0 +1,9 @@
+[2018-07-19 16:02:20.217] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 商品名称-----0124-测试01
+[2018-07-19 16:02:20.340] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 规格-----01
+[2018-07-19 16:02:20.451] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 条形码-----
+[2018-07-19 16:02:20.568] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 采购价(元)-----5.00
+[2018-07-19 16:02:20.728] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 采购单位-----罐
+[2018-07-19 16:02:20.844] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 采购数量-----1
+[2018-07-19 16:02:20.967] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 基本计量单位-----个
+[2018-07-19 16:02:21.081] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 基本计量数量-----20.00
+[2018-07-19 16:02:21.200] [main] [ERROR] com.hebg3.utils.PageHelperUtil - 采购总额(元)-----5.00

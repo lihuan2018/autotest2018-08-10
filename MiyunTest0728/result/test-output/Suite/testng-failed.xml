@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browserName" value="chrome"/>
+  <parameter name="paramFilePath" value="config/paramsProvider/csjxs.miyunplus.properties"/>
+  <parameter name="driverFilePath" value="config/driver.properties"/>
+  <listeners>
+    <listener class-name="com.hebg3.plugins.arrow.TestResultListener"/>
+    <listener class-name="com.hebg3.plugins.arrow.RetryListener"/>
+    <listener class-name="com.hebg3.plugins.arrow.PowerEmailableReporter"/>
+  </listeners>
+  <test thread-count="1" name="Login(failed)">
+    <groups>
+      <run>
+        <include name="生成采购订单"/>
+        <include name="生成采购入库单"/>
+        <exclude name="临时"/>
+        <exclude name=""/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test">
+        <methods>
+          <include name="endTest"/>
+          <include name="toPurchasePlantOrders"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.hebg3.testcases.login.LoginPage_001_LoginSuccessFunction_Test -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->

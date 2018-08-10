@@ -1,0 +1,41 @@
+.LOG
+17:56 2018/7/18 星期三
+1. 报错找不到元素，元素位置位于table，或为打开多个页面，有同名table，定位到其他页面table；(存疑：已switchTo frame)；或可加载时间过长？
+2. 采购入库单报错找不到元素(id = goodName)；
+3. 采购退货单报错no such element{"method":"id","selector":"supplierId"}
+4. 以上详见testreports 201807181801.html
+
+16:02 2018/7/19 星期四
+1.log4j2.xml在Logger节点设置错误，导致日志文件无内容输出，目前暂时更改为，root节点增加AppenderRef，并各自分level；
+2.关于填单前后的数据对比：
+    2.1 PageHelperUtil.recordData()获取数据，存入Map；
+    2.2 各填单页面PageHelper修改typeOrderQuickly()方法，return Map，并在其中增加引用上述方法；
+    2.3 各查询页面PageHelper增加searchOrder()方法，return Map，用以查看单据详情；
+    2.4 PageHelperUtil.compareMap()对比数据；
+    2.5 各填单页面PageHelper增加compareMap()方法，用以各自标出填单&详情表头不一致情况；
+    2.6 待修改后(填单&详情表头一致)，可整合为一个public方法；
+3.增加了用例排序，使用priority属性值的方法；
+
+16:15 2018/7/24 星期二  版本更新
+1.PageHelperUtil.selectByVisibleText_0()方法，先执行js代码，修改元素属性，之后创建Select对象，以防出现No such element错误；
+2.ToSearchInventoryPageHelper.java增加searchInventory()方法，可根据列名查询；
+3.ToSearchInventoryPageHelper.java增加private方法checkDisplayColumn()，以处理页面Bug；
+4.ToSearchInventoryPageHelper.java删除其他无用方法；
+
+16:54 2018/7/25 星期三
+1.PageHelperUtil.recordData()增加一个重写方法，以适应库存查询等页面，无法获取到表头内容问题；
+2.待修改所有页面 (Str == null || Str == "") 为(StringUtils.isBlank(Str))，或可暂改为 (Str == null || Str.equals(""));
+
+17:33 2018/7/26 星期四
+1.PageHelperUtil.recordData()修改，适应表头内容能/否获取到的情况(填单、详情页面，fixed-table-header标签内的table标签为空，查询页面该table标签不为空，故无法getText())；
+2.逐步规范PageHelper:进行采购模块的填单页面；
+
+17:05 2018/7/27 星期五
+1.规范化Purchase部分的Page、PageHelper文件命名，重构文件名，其他文件待修改；
+2.测试类中的变量定义，采用PropertiesDataProvider；
+3.properties文件中文乱码问题：首选项—general—Content Types—text—JavaPropertiesFile，修改Default encoding为utf-8，读取为中文，但运行时取值为ASCII码；
+4.安装PropertiesEditor插件，解决中文乱码问题；
+
+15:11 2018/7/28 星期六
+1.拟重构拆分PageHelperUtil；
+2.变量参数化(PageHelperUtil.addProductByName.pageName，…)；
